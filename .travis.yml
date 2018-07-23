@@ -1,0 +1,17 @@
+
+language: node_js
+
+install:
+    - yarn
+
+services:
+  - docker
+
+install:
+  - docker build -t dockerfonseka/personal_frontend:latest .
+
+deploy:
+  provider: script
+  script: bash docker_push.sh
+  on:
+    branch: master
