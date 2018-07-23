@@ -1,18 +1,17 @@
-# base image
-FROM node:9.6.1
+FROM node:8
 
-# set working directory
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
+ADD yarn.lock /yarn.lock
+ADD package.json /package.json
 
-# add `/usr/src/app/node_modules/.bin` to $PATH
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
+ENV NODE_PATH=/node_modules
+ENV PATH=$PATH:/node_modules/.bin
+RUN yarn
 
-# install and cache app dependencies
-COPY package.json /usr/src/app/package.json
-RUN npm install --silent
-RUN npm install react-scripts@1.1.1 -g --silent
-RUN npm install @material-ui/core
-RUN npm install @material-ui/icons
-# start app
-CMD ["npm", "start"]
+WORKDIR /app
+ADD . /app
+
+EXPOSE 3000
+EXPOSE 35729
+
+ENTRYPOINT ["/bin/bash", "/app/run.sh"]
+CMD ["start"]
