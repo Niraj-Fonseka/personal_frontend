@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
+import Dashboard from '@material-ui/icons/Dashboard'
+import Home from '@material-ui/icons/Home'
+import Work from '@material-ui/icons/Work'
 import DraftsIcon from '@material-ui/icons/Drafts';
 import StarIcon from '@material-ui/icons/Star';
-import SendIcon from '@material-ui/icons/Send';
-import List from '@material-ui/core/List';
 
 
 class MailFolderListItems extends Component {
@@ -24,27 +24,27 @@ class MailFolderListItems extends Component {
           <div>
         <ListItem button onClick={this.props.click}>
       <ListItemIcon>
-        <InboxIcon />
+        <Home />
       </ListItemIcon>
       <ListItemText primary="Profile" />
     </ListItem>
     <ListItem button onClick={this.props.resumeOnClick}>
       <ListItemIcon>
-        <StarIcon />
+        <Work />
       </ListItemIcon>
       <ListItemText primary="Resume" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <SendIcon />
+        <Dashboard />
       </ListItemIcon>
-      <ListItemText primary="Send mail" />
+      <ListItemText primary="Dashboard" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <DraftsIcon />
       </ListItemIcon>
-      <ListItemText primary="Drafts" />
+      <ListItemText primary="Contact me" />
     </ListItem>
     </div>
       );
