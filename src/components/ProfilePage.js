@@ -20,10 +20,10 @@ class ProfilePage extends Component {
     render() {
       return (
        <div>
-        <Grid container spacing={24} style={{padding: 24}}>
-            <Grid item lg={4} xl={3}>
+        <Grid container spacing={24} style={{padding: 24}} >
+            <Grid item lg>
              <Card raised>
-                    <CardMedia style={{height: 200 , paddingTop : '56.25%'}}
+                    <CardMedia style={{paddingTop : '56.25%'}}
                         image={"https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg"}
                         title="Photo"
                     />
@@ -38,12 +38,32 @@ class ProfilePage extends Component {
                         </Button>
                     </CardActions>
                 </Card>
+
                 
             </Grid>
-
-            <Grid item xs={12} sm={6} lg={4} xl={3}>
+            <Grid item lg>
              <Card raised>
-                    <CardMedia style={{height: 200 , paddingTop : '56.25%'}}
+                    <CardMedia style={{paddingTop : '56.25%'}}
+                        image={"https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg"}
+                        title="Photo"
+                    />
+                    <CardContent>
+                        <Typography component="p">
+                            The profile description goes here
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Button size="small" color="primary" href="http://google.com" target="_blank">
+                            Go To Course
+                        </Button>
+                    </CardActions>
+                </Card>
+
+                
+            </Grid>
+            <Grid item lg>
+             <Card raised>
+                    <CardMedia style={{ paddingTop : '56.25%'}}
                         image={"https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg"}
                         title="Photo"
                     />
