@@ -22,14 +22,15 @@ class ProfilePage extends Component {
        <div>
         <Grid container spacing={24} style={{padding: 24}} >
             <Grid item lg>
-             <Card raised style={{ height: '100%', marginBottom:24}}>
-                    <CardMedia style={{paddingTop : '56.25%'}}
+             <Card raised style={{ height: '97%', marginBottom:30}}>
+                    <CardMedia style={{ margin: 30, height:300,width:300}}
                         image={"https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg"}
                         title="Photo"
                     />
                     <CardContent>
                         <Typography component="p">
-                            The profile description goes here
+                            Hello! I'm Niraj.I'm a software engineer located in Austin.TX. <br/>
+                            Im
                         </Typography>
                     </CardContent>
                     <CardActions>
@@ -75,9 +76,9 @@ class ProfilePage extends Component {
                 </Card>
                 
             </Grid>
-            <Grid item lg>
-             <Card raised>
-                    <CardMedia style={{ paddingTop : '56.25%'}}
+              <Grid item lg>
+             <Card raised style={{marginBottom:30}}>
+                    <CardMedia style={{  paddingTop : '56.25%'}}
                         image={"https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg"}
                         title="Photo"
                     />
@@ -92,8 +93,7 @@ class ProfilePage extends Component {
                         </Button>
                     </CardActions>
                 </Card>
-
-                <Card raised>
+                <Card raised style={{marginBottom:30}}>
                     <CardMedia style={{paddingTop : '56.25%'}}
                         image={"https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg"}
                         title="Photo"
@@ -112,32 +112,6 @@ class ProfilePage extends Component {
                 
             </Grid>
         </Grid>
-        
-            {/* <Grid item xs={12} sm={6} lg={4} xl={3}>
-            <Card raised style={{minHeight:300 }}>
-                    <CardMedia style={{ maxHeight:300 , maxWidth: 300, paddingTop : '75.25%'}}
-                        image={"https://s3-us-west-2.amazonaws.com/nirajfonsekacom/UT300x300.jpeg"}
-                        title="Photo"
-                    />
-                    <CardContent>
-                     
-                    </CardContent>
-                    <CardActions>
-                        <Button size="small" color="primary" href="http://google.com" target="_blank">
-                            Go To Course
-                        </Button>
-                    </CardActions>
-            </Card>
-            <Paper elevation={1}>
-                <Typography variant="headline" component="h3">
-                    This is a sheet of paper.
-                </Typography>
-                <Typography component="p">
-                     Paper can be used to build surface or other elements for your application.
-                </Typography>
-            </Paper>
-                
-            </Grid> */}
         </div>
       );
     }
