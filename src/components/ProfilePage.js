@@ -50,8 +50,9 @@ class ProfilePage extends Component {
                         <Typography component="p">
                             The profile description goes here
 
-                            Testing for caching
-                        </Typography>
+                            This paragraph should be evern longer now <br/>
+                            because a break point was added
+                        </Typography>   
                     </CardContent>
                     <CardActions>
                         <Button size="small" color="primary" href="http://google.com" target="_blank">
