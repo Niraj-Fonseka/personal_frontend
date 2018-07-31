@@ -5,5 +5,8 @@ handlers:
 - url: /
   static_files: build/index.html
   upload: build/index.html
+  expiration: "0d 10m"
+
 - url: /
   static_dir: build
+  expiration: "0d 10m"

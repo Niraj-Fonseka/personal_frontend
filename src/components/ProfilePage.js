@@ -29,8 +29,8 @@ class ProfilePage extends Component {
                     />
                     <CardContent>
                         <Typography component="p">
-                            Hello! I'm Niraj.I'm a software engineer located in Austin.TX. <br/>
-                            Im
+                            Profile description goes here <br/>
+                            and here
                         </Typography>
                     </CardContent>
                     <CardActions>
@@ -44,12 +44,13 @@ class ProfilePage extends Component {
             <Grid item lg>
              <Card raised style={{marginBottom:30}}>
                     <CardMedia style={{  paddingTop : '56.25%'}}
-                        image={"https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg"}
                         title="Photo"
                     />
                     <CardContent>
                         <Typography component="p">
                             The profile description goes here
+
+                            Testing for caching
                         </Typography>
                     </CardContent>
                     <CardActions>
@@ -60,7 +61,7 @@ class ProfilePage extends Component {
                 </Card>
                 <Card raised style={{marginBottom:30}}>
                     <CardMedia style={{paddingTop : '56.25%'}}
-                        image={"https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg"}
+                    
                         title="Photo"
                     />
                     <CardContent>
@@ -79,7 +80,7 @@ class ProfilePage extends Component {
               <Grid item lg>
              <Card raised style={{marginBottom:30}}>
                     <CardMedia style={{  paddingTop : '56.25%'}}
-                        image={"https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg"}
+                       
                         title="Photo"
                     />
                     <CardContent>
@@ -95,7 +96,7 @@ class ProfilePage extends Component {
                 </Card>
                 <Card raised style={{marginBottom:30}}>
                     <CardMedia style={{paddingTop : '56.25%'}}
-                        image={"https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg"}
+                      
                         title="Photo"
                     />
                     <CardContent>
