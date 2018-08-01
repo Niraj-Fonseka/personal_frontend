@@ -14,3 +14,5 @@ docker run -it \
   --rm \
   sample-app
 ```
+
+can use the expansion pannels for resume expansion and project expansion

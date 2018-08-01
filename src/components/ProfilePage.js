@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid'
-import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
-import CardContent from '@material-ui/core/CardContent'
-import CardMedia from '@material-ui/core/CardMedia'
-import Button from '@material-ui/core/Button'
-import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
-
-
+const style = {
+    height :500,
+    margin: 20,
+};
+const styleBottom = {
+    height :250,
+    margin: 20,
+};
 class ProfilePage extends Component {
 
 
@@ -16,104 +17,21 @@ class ProfilePage extends Component {
         super(props);
     }
 
-
+ //690 × 388 image 
     render() {
       return (
        <div>
-        <Grid container spacing={24} style={{padding: 24}} >
-            <Grid item lg>
-             <Card raised style={{ height: '97%', marginBottom:30}}>
-                    <CardMedia style={{ margin: 30, height:300,width:300}}
-                        image={"https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg"}
-                        title="Photo"
-                    />
-                    <CardContent>
-                        <Typography component="p">
-                            Profile description goes here <br/>
-                            and here
-                        </Typography>
-                    </CardContent>
-                    <CardActions>
-                        <Button size="small" color="primary" href="http://google.com" target="_blank">
-                            Go To Course
-                        </Button>
-                    </CardActions>
-                </Card>
-            </Grid>
-
-            <Grid item lg>
-             <Card raised style={{marginBottom:30}}>
-                    <CardMedia style={{  paddingTop : '56.25%'}}
-                        title="Photo"
-                    />
-                    <CardContent>
-                        <Typography component="p">
-                            The profile description goes here
-
-                            This paragraph should be evern longer now <br/>
-                            because a break point was added
-                        </Typography>   
-                    </CardContent>
-                    <CardActions>
-                        <Button size="small" color="primary" href="http://google.com" target="_blank">
-                            Go To Course
-                        </Button>
-                    </CardActions>
-                </Card>
-                <Card raised style={{marginBottom:30}}>
-                    <CardMedia style={{paddingTop : '56.25%'}}
-                    
-                        title="Photo"
-                    />
-                    <CardContent>
-                        <Typography component="p">
-                            The profile description goes here
-                        </Typography>
-                    </CardContent>
-                    <CardActions>
-                        <Button size="small" color="primary" href="http://google.com" target="_blank">
-                            Go To Course
-                        </Button>
-                    </CardActions>
-                </Card>
-                
-            </Grid>
-              <Grid item lg>
-             <Card raised style={{marginBottom:30}}>
-                    <CardMedia style={{  paddingTop : '56.25%'}}
-                       
-                        title="Photo"
-                    />
-                    <CardContent>
-                        <Typography component="p">
-                            The profile description goes here
-                        </Typography>
-                    </CardContent>
-                    <CardActions>
-                        <Button size="small" color="primary" href="http://google.com" target="_blank">
-                            Go To Course
-                        </Button>
-                    </CardActions>
-                </Card>
-                <Card raised style={{marginBottom:30}}>
-                    <CardMedia style={{paddingTop : '56.25%'}}
-                      
-                        title="Photo"
-                    />
-                    <CardContent>
-                        <Typography component="p">
-                            The profile description goes here
-                        </Typography>
-                    </CardContent>
-                    <CardActions>
-                        <Button size="small" color="primary" href="http://google.com" target="_blank">
-                            Go To Course
-                        </Button>
-                    </CardActions>
-                </Card>
-                
-            </Grid>
+       <Grid container spacing={5}>
+        <Grid item xs={12}>
+          <Paper style={style}>xs=12</Paper>
         </Grid>
+        <Grid item xs={6}>
+          <Paper style={styleBottom} >xs=6</Paper>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper style={styleBottom} >xs=6</Paper>
+        </Grid>
+      </Grid>
         </div>
       );
     }

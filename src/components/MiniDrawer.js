@@ -96,6 +96,7 @@ class MiniDrawer extends React.Component {
     open: false,
     profileClicked: true,
     resumeClicked: false,
+    dashboardClicked: false,
   };
 
 
@@ -105,9 +106,14 @@ class MiniDrawer extends React.Component {
     this.setState({ profileClicked : true })
   }
 
+  handleOnDashboardClick = (e) => {
+    
+    this.setState({ profileClicked : false , dashboardClicked: true, resumeClicked : false })
+  }
+
   handleOnResumeClick = (e) => {
     
-    this.setState({ profileClicked : false , resumeClicked : true })
+    this.setState({ profileClicked : false ,dashboardClicked: false, resumeClicked : true })
   }
 
   handleDrawerOpen = () => {
@@ -158,7 +164,7 @@ class MiniDrawer extends React.Component {
           </div>
           <Divider />
           <List>
-            <MailFolderListItems resumeOnClick={this.handleOnResumeClick.bind(this)} click={this.handleOnButtonClick.bind(this)}/>
+            <MailFolderListItems dashboardOnClick={this.handleOnDashboardClick.bind(this)} resumeOnClick={this.handleOnResumeClick.bind(this)} click={this.handleOnButtonClick.bind(this)}/>
           </List>
           <Divider />
         </Drawer>

@@ -34,7 +34,7 @@ class MailFolderListItems extends Component {
       </ListItemIcon>
       <ListItemText primary="Resume" />
     </ListItem>
-    <ListItem button>
+    <ListItem button onClick={this.props.dashboardOnClick}>
       <ListItemIcon>
         <Dashboard />
       </ListItemIcon>

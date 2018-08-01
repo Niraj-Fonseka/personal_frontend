@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ProfilePage from './ProfilePage'
 import Resume from './Resume'
+import Dashboard from './Dashboard';
 
 class MainBody extends Component {
 
@@ -31,7 +32,7 @@ class MainBody extends Component {
       }else{
         return(
           <div>
-            "Nothing"
+            <Dashboard / >
           </div>
           );
       }
