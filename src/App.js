@@ -34,8 +34,8 @@ class App extends Component {
   render() {
     return (
      <div>
-    <MuiThemeProvider theme={theme}>
-       <MiniDrawer />
+    <MuiThemeProvider  theme={theme}>
+       <MiniDrawer  />
        </MuiThemeProvider>
 
       </div>
