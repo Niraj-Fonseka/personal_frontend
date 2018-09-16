@@ -37,7 +37,16 @@
   font-size: large;
 }
 
+.profile {
+  overflow: scroll;
+  height: 85vh;
+}
+
+.resume-field{
+  margin-bottom: 1px;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+

@@ -5,8 +5,8 @@ class MobileApp extends Component {
   render() {
     return (
      <div>
-         Mobile Page
-
+        Mobile page coming soon .. please visit this
+        url with a desktop / laptop or a mobile device 
       </div>
     );
   }

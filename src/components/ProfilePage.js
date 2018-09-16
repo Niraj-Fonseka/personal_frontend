@@ -4,8 +4,6 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid'
 
 
-
-
 class ProfilePage extends Component {
 
 
@@ -13,23 +11,18 @@ class ProfilePage extends Component {
         super(props);
     }
 
- //690 × 388 image 
+    
     render() {
       return (
-              <Grid container>
-              <Grid item sm={12}>
-                  <Typography variant='body1'>
-                   Hello mY name is niraj and im from texas
-                  </Typography>
-              </Grid>
-              <Grid item sm>
-                <Typography variant='body1'>
-                        tring to get this shit to work for months now. But it still doesnt look like its working
-                  </Typography>
-              </Grid>
-            </Grid>
-        
-  
+          
+          <div class="profile" align="center">
+            <img src='https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg'/>
+            <Typography noWrap='false' style={{whiteSpace: 'normal' , width: '60vh'}}>
+              Hello! My Name is Niraj Fonseka. I graduated from the University of Texas with a degree in 
+              Computer Science and a Minor in Business. I'm currently working as a Software Engineer at The Home Depot. 
+            </Typography>
+          </div>
+
       );
     }
   }

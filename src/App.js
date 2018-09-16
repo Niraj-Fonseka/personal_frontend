@@ -7,28 +7,14 @@ import './App.css';
 
 
 const theme = createMuiTheme({
+  typography: {
+    fontFamily: '"Courier New"',
+  },
   palette: {
     type: 'dark', // Switching the dark mode on is a single property value change.
     primary: Grey
   },
 });
-
-// const theme = createMuiTheme({
-//   palette: {
-//     primary: {
-//       light: '#c1d5e0',
-//       main: '#90a4ae',
-//       dark: '#62757f',
-//       contrastText: '#000',
-//     },
-//     secondary: {
-//       light: '#6d6d6d',
-//       main: '#424242',
-//       dark: '#1b1b1b',
-//       contrastText: '#FFF',
-//     },
-//   },
-// });
 
 class App extends Component {
   render() {
@@ -37,7 +23,6 @@ class App extends Component {
     <MuiThemeProvider  theme={theme}>
        <MiniDrawer  />
        </MuiThemeProvider>
-
       </div>
     );
   }

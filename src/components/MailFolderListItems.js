@@ -38,7 +38,7 @@ class MailFolderListItems extends Component {
       <ListItemIcon>
         <Dashboard />
       </ListItemIcon>
-      <ListItemText primary="Dashboard" />
+      <ListItemText primary="Cool things" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
