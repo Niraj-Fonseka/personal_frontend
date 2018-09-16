@@ -3,6 +3,20 @@
   
 }
 
+.child {
+  border: solid 1px;
+  display: flex;
+}
+.left {
+  width: 100px;
+}
+.container {
+  display: flex;
+  width: 90%;
+
+  flex-wrap: wrap;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;

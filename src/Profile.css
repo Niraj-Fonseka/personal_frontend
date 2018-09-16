@@ -1,0 +1,13 @@
+.child {
+    border: solid 1px;
+    display: flex;
+  }
+  .left {
+    width: 100px;
+  }
+  .container {
+    background-color: #FFF;
+
+    display: flex;
+    flex-wrap: nowrap;
+  }
