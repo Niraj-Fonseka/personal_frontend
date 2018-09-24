@@ -8,22 +8,22 @@ import InfoIcon from '@material-ui/icons/Info';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 
 
-const styles = theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    backgroundColor: 'blue',
-  },
-  gridList: {
-    width: 500,
-    height: 450,
-  },
-  subheader: {
-    width: '100%',
-  },
-});
+// const styles = theme => ({
+//   root: {
+//     display: 'flex',
+//     flexWrap: 'wrap',
+//     justifyContent: 'space-around',
+//     overflow: 'hidden',
+//     backgroundColor: 'blue',
+//   },
+//   gridList: {
+//     width: 500,
+//     height: 450,
+//   },
+//   subheader: {
+//     width: '100%',
+//   },
+// });
 
 const tileData = [
   {
@@ -48,7 +48,7 @@ const tileData = [
     img: "Testing",
     title: 'Image',
     author: 'author',
-    cols: 3,
+    cols: 1,
   },
   {
     img: "Testing",
@@ -89,7 +89,7 @@ class Dashboard extends Component {
             'Content-Type': 'multipart/form-data'
         });
 
-        let opt = Object.assign({}, defaultOptions); //将默认的参数和传过来的合并在一起
+        let opt = Object.assign({}, defaultOptions); 
 
         let sentData={
             method:opt.method,
@@ -108,14 +108,21 @@ class Dashboard extends Component {
         <div className='dashboard'>
         <GridList cellHeight={300}  cols={3}>
           {tileData.map(tile => (
-            <GridListTile className='tile' key={tile.img} cols={tile.cols || 1}>
+            <GridListTile  style={{margin: '0px'}} key={tile.img} cols={tile.cols || 1}>
+              <div style={{whiteSpace: 'normal' }}>
+              Tekjansdkj najksdknasjdna kjsdnaksjd nasda sdsdas
+                asdasdad asdasd aasd
+                asdalsdkmasdlasd
+                sasdasdsdasd
+                asdalsdkmasdl
+                asdalsdkmasdlasdasd
+                asdasd
+                asdalsdkmasdlasdasd
+                asdasd
+                
+              </div>
 
-
-              <GridListTileBar
-              className='tileBar'
-              title={tile.title}
-              subtitle={<span>by: {tile.author}</span>}
-               />
+             
             </GridListTile>
           ))}
         </GridList>
