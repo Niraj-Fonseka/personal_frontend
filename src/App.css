@@ -42,6 +42,12 @@
   height: 85vh;
 }
 
+
+.dashboard {
+  overflow: scroll;
+  height: 90vh;
+}
+
 .resume-field{
   margin-bottom: 1px;
 }
