@@ -19,89 +19,81 @@ const styles = theme => ({
 
 class Resume extends Component {
 
-
-    
-
     constructor(props){
         super(props);
     }
-
-   
-
 
     render() {
 
         return (
         <div class="profile">
-
-
-        <div>
-        <div style={{marginBottom: 10}}>
-            <div style={{marginBottom: 5}}>
-            <Typography variant='title'>
-                    Education
-            </Typography>
+            <div>
+                <div style={{marginBottom: 10}}>
+                    <div style={{marginBottom: 5}}>
+                        <Typography variant='title'>
+                                Education
+                        </Typography>
+                    </div>
+                    <div style={{marginBottom: 5}}>
+                        <Typography>
+                                University of Texas at Austin - ( 2013 - 2017 )
+                        </Typography>
+                </div>
             </div>
-            <div style={{marginBottom: 5}}>
-            <Typography>
-                    University of Texas at Austin - ( 2013 - 2017 )
-            </Typography>
-            </div>
-        </div>
-        <div class="resume-field">
-        <ExpansionPanel >
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography >Bachelor of Science in Computer Science</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-            <img src='https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg'/>
-            <Typography noWrap='false' style={{whiteSpace: 'normal'}}>
-                <ul>
+            <div class="resume-field">
+            <ExpansionPanel >
+                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography >Bachelor of Science in Computer Science</Typography>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails>
+                <img src='https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg'/>
+                <Typography noWrap='false' style={{whiteSpace: 'normal'}}>
                     <ul>
-                        <li>Computer Science Courses
-                            <ul>
-                                <li>Foundations of Programming ( Java ) </li>
-                                <li>Datastructures and Algorithms  ( Java , Python )</li>
-                                <li>Descrete Mathematics</li>
-                                <li>Operating Systems ( C ) </li>
-                                <li>Computer Architecture ( C ) </li>
-                                <li>Cyberphysical Systems ( C / Bash )</li>
-                                <li>Computer Security ( Java )</li>
-                                <li>Object Oriented Programming ( C++ ) </li>
-                                <li>Algorithms and Complexity</li>
-                            </ul>
-                        </li>
-                        <br/>
-                        <li>Mathematics Courses
-                            <ul>
-                                <li>Single variable calculus</li>
-                                <li>Multi variable calculus</li>
-                                <li>Descrete Mathematics</li>
-                                <li>Linear Algebra and Matrix Calculations</li>
-                                <li>Multi variable calculus</li>
-                            </ul>
-                        </li>
-                        <br/>
-                        <li>Other Notable Courses
-                            <ul>
-                                <li>Physics 1, 2</li>
-                                <li>Chemistry 1, 2</li>
-                                <li>Geology 1, 2</li>
-                                <li>Roman History</li>
-                                <li>Greek History / Mythology</li>
-                                <li>Russian History</li>
-                                <li>Human Brain and Psychology</li>
-                                <li>American Criminal Justice System</li>
+                        <ul>
+                            <li>Computer Science Courses
+                                <ul>
+                                    <li>Foundations of Programming ( Java ) </li>
+                                    <li>Datastructures and Algorithms  ( Java , Python )</li>
+                                    <li>Descrete Mathematics</li>
+                                    <li>Operating Systems ( C ) </li>
+                                    <li>Computer Architecture ( C ) </li>
+                                    <li>Cyberphysical Systems ( C / Bash )</li>
+                                    <li>Computer Security ( Java )</li>
+                                    <li>Object Oriented Programming ( C++ ) </li>
+                                    <li>Algorithms and Complexity</li>
+                                </ul>
+                            </li>
+                            <br/>
+                            <li>Mathematics Courses
+                                <ul>
+                                    <li>Single variable calculus</li>
+                                    <li>Multi variable calculus</li>
+                                    <li>Descrete Mathematics</li>
+                                    <li>Linear Algebra and Matrix Calculations</li>
+                                    <li>Multi variable calculus</li>
+                                </ul>
+                            </li>
+                            <br/>
+                            <li>Other Notable Courses
+                                <ul>
+                                    <li>Physics 1, 2</li>
+                                    <li>Chemistry 1, 2</li>
+                                    <li>Geology 1, 2</li>
+                                    <li>Roman History</li>
+                                    <li>Greek History / Mythology</li>
+                                    <li>Russian History</li>
+                                    <li>Human Brain and Psychology</li>
+                                    <li>American Criminal Justice System</li>
 
-                            </ul>
-                        </li>
-                        
-                     </ul>            
-                </ul>
-            </Typography>
-            </ExpansionPanelDetails>
-        </ExpansionPanel>
-        </div>
+                                </ul>
+                            </li>
+                            
+                        </ul>            
+                    </ul>
+                </Typography>
+                </ExpansionPanelDetails>
+            </ExpansionPanel>
+            </div>
         <div  class="resume-field">
         <ExpansionPanel>
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
