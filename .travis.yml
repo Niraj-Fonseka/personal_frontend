@@ -4,6 +4,8 @@ deploy:
     script: bash scripts/deploy-stage.sh staging
     on:
       branch: master
+
+  # pushing the code again
   # deploy master to production
   # - provider: script
   #   script: bash scripts/deploy-stage.sh production
