@@ -19,15 +19,15 @@ class SpaceX extends Component {
         if (this.props.loaded) {
             return(
                 <div style={{whiteSpace: 'normal' }}>
-                    <div style={{fontSize: '15px', fontFamily:"sans-serif"}}> 
+
+                    <div style={{fontSize: '25px' , marginBottom: '10px'}}>
+                        Upcoming Space X Launch
+                    </div>
+                    <div style={{fontSize: '15px'}}> 
                         {this.props.payload.details} 
                     </div>
-    
-                    <div>
-                    <img src={this.props.payload.missionPatch}/>
-                    </div>
-    
-                    <div>
+
+                    <div style={{ marginTop: '10px'}} >
                         Flight Number : {this.props.payload.flight_number}
                     </div>
     
@@ -35,14 +35,14 @@ class SpaceX extends Component {
                         Launch Date : {this.props.payload.launch_date_utc}
                     </div>
         
-                    
+                    <hr/>
                 </div>
             )
     
         }else{
             return (
                 <div>
-                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/f1055231234507.564a1d234bfb6.gif" style={{ height : "50px" , width : "50px" , paddingTop : "35%"  , marginLeft: "auto" , margin : "auto", display: "block"}} />
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/f1055231234507.564a1d234bfb6.gif" />
                 </div>
             )
         }

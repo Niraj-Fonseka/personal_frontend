@@ -7,7 +7,6 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
 const styles = theme => ({
     root: {
       width: '100%',
@@ -57,7 +56,48 @@ class Resume extends Component {
             <ExpansionPanelDetails>
             <img src='https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg'/>
             <Typography noWrap='false' style={{whiteSpace: 'normal'}}>
-           
+                <ul>
+                    <ul>
+                        <li>Computer Science Courses
+                            <ul>
+                                <li>Foundations of Programming ( Java ) </li>
+                                <li>Datastructures and Algorithms  ( Java , Python )</li>
+                                <li>Descrete Mathematics</li>
+                                <li>Operating Systems ( C ) </li>
+                                <li>Computer Architecture ( C ) </li>
+                                <li>Cyberphysical Systems ( C / Bash )</li>
+                                <li>Computer Security ( Java )</li>
+                                <li>Object Oriented Programming ( C++ ) </li>
+                                <li>Algorithms and Complexity</li>
+                            </ul>
+                        </li>
+                        <br/>
+                        <li>Mathematics Courses
+                            <ul>
+                                <li>Single variable calculus</li>
+                                <li>Multi variable calculus</li>
+                                <li>Descrete Mathematics</li>
+                                <li>Linear Algebra and Matrix Calculations</li>
+                                <li>Multi variable calculus</li>
+                            </ul>
+                        </li>
+                        <br/>
+                        <li>Other Notable Courses
+                            <ul>
+                                <li>Physics 1, 2</li>
+                                <li>Chemistry 1, 2</li>
+                                <li>Geology 1, 2</li>
+                                <li>Roman History</li>
+                                <li>Greek History / Mythology</li>
+                                <li>Russian History</li>
+                                <li>Human Brain and Psychology</li>
+                                <li>American Criminal Justice System</li>
+
+                            </ul>
+                        </li>
+                        
+                     </ul>            
+                </ul>
             </Typography>
             </ExpansionPanelDetails>
         </ExpansionPanel>
@@ -69,13 +109,14 @@ class Resume extends Component {
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
             <Typography noWrap='false' style={{whiteSpace: 'normal'}}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                sit amet blandit leo lobortis eget.
-                asdasdasdaksldamskldm aklsdm admaksd mlakmsd lasd
-                asdklamsdlkamsdklamsk askdm alksdmalskd masd mksmdkskksmd aksmd as daksm kasmd ks smdskmdks malesuadaa
-                asdasdasdaksldamskldmasdda
-                sdasdasdasdkmal mas d
-                asdasdasdaksldamskldmasddasdasd
+                <ul>
+                     <li>Foundations of Accounting</li>
+                     <li>Foundations of Finance</li>
+                     <li>Management Information Systems</li>
+                     <li>Foundations of Business Law</li>
+                     <li>Foundations of Marketing</li>
+                     <li>Foundations of Economics</li>
+                </ul>
             </Typography>
             </ExpansionPanelDetails>
         </ExpansionPanel>

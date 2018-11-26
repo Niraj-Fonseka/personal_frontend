@@ -12,10 +12,6 @@ class MainBody extends Component {
 
 
     render() {
-
-      console.log("Profile Clicked " + this.props.profileClicked);
-      console.log("Resume Clicked " + this.props.resume);
-      
       
       if (this.props.profileClicked){
         return (

@@ -4,56 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import SpaceX from './DashboardTileData/SpaceX'
-
-// const styles = theme => ({
-//   root: {
-//     display: 'flex',
-//     flexWrap: 'wrap',
-//     justifyContent: 'space-around',
-//     overflow: 'hidden',
-//     backgroundColor: 'blue',
-//   },
-//   gridList: {
-//     width: 500,
-//     height: 450,
-//   },
-//   subheader: {
-//     width: '100%',
-//   },
-// });
-
-// const tileData = [
-//   {
-//     img: "Testing",
-//     title: this.state.spaceXPayload.details,
-//     author: 'author',
-//     cols: 1,
-//   },
-//   {
-//     img: "Testing",
-//     title: 'Weather Is this \n sasdasd \n adasdasdajksdnakjsdn <br> asdalsdkmasdl',
-//     author: 'author',
-//     cols: 2,
-//   },
-//   {
-//     img: "Testing",
-//     title: 'Image',
-//     author: 'author',
-//     cols: 1,
-//   },
-//   {
-//     img: "Testing",
-//     title: 'Image',
-//     author: 'author',
-//     cols: 1,
-//   },
-//   {
-//     img: "Testing",
-//     title: 'Image',
-//     author: 'author',
-//     cols: 1,
-//   },
-// ];
+import Twitter from './DashboardTileData/Twitter'
 
 class Dashboard extends Component {
 
@@ -149,44 +100,16 @@ class Dashboard extends Component {
       }
       return (
         <div className='dashboard'>
-        <GridList cellHeight={300}  cols={3}>
-        <GridListTile  style={{margin: '0px' , background : '#676767'}} key={""} cols={1}>
+        <GridList cellHeight={200}  cols={3}>
+        <GridListTile  style={{margin: '1px' }} key={""} cols={3}>
             <SpaceX loaded={this.state.spaceXLoaded} payload={this.state.spaceXPayload}/>
+
         </GridListTile>
 
-         <GridListTile  style={{margin: '0px',background : '#494747'}} key={""} cols={2}>
-          <div style={{whiteSpace: 'normal' }}>
-                
-          </div>
-        </GridListTile>
 
-        <GridListTile  style={{margin: '0px' , background : '#514f4f'}} key={""} cols={1}>
+        <GridListTile  style={{margin: '0px' ,background : '#898989'}} key={""} cols={3}>
           <div style={{whiteSpace: 'normal' }}>
-                
-          </div>
-        </GridListTile>
-
-        <GridListTile  style={{margin: '0px' , background : '#929292' }} key={""} cols={ 1}>
-          <div style={{whiteSpace: 'normal' }}>
-                
-          </div>
-        </GridListTile>
-
-        <GridListTile  style={{margin: '0px' , background : '#242424' }} key={""} cols={ 1}>
-          <div style={{whiteSpace: 'normal' }}>
-                
-          </div>
-        </GridListTile>
-
-        <GridListTile  style={{margin: '0px' , background : '#898989'}} key={""} cols={2}>
-          <div style={{whiteSpace: 'normal' }}>
-                
-          </div>
-        </GridListTile>  
-
-        <GridListTile  style={{margin: '0px' ,background : '#898989'}} key={""} cols={1}>
-          <div style={{whiteSpace: 'normal' }}>
-                
+              <Twitter />
           </div>
         </GridListTile>  
         </GridList>

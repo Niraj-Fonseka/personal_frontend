@@ -12,8 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-//import { mailFolderListItems, otherMailFolderListItems } from './tileData';
-import MailFolderListItems from './MailFolderListItems'
+import DrawerItems from './DrawerItems'
 import MainBody from './MainBody'
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -165,7 +164,7 @@ class MiniDrawer extends React.Component {
           </div>
           <Divider />
           <List>
-            <MailFolderListItems dashboardOnClick={this.handleOnDashboardClick.bind(this)} resumeOnClick={this.handleOnResumeClick.bind(this)} click={this.handleOnButtonClick.bind(this)}/>
+            <DrawerItems dashboardOnClick={this.handleOnDashboardClick.bind(this)} resumeOnClick={this.handleOnResumeClick.bind(this)} click={this.handleOnButtonClick.bind(this)}/>
           </List>
           <Divider />
         </Drawer>
