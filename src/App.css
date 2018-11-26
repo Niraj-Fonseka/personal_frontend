@@ -18,6 +18,13 @@
   flex-wrap: wrap;
 }
 
+.dashtile {
+  overflow-y:scroll;
+  float:left;
+  white-space: 'normal';
+  position:relative;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;

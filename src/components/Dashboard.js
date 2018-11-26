@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import SpaceX from './DashboardTileData/SpaceX'
-import Twitter from './DashboardTileData/Twitter'
+import BreakingNews from './DashboardTileData/BreakingNews'
 
 class Dashboard extends Component {
 
@@ -13,12 +13,13 @@ class Dashboard extends Component {
         super(props);
         this.fetchWeatherData = this.fetchWeatherData.bind(this);
         this.state = {
-          spaceXPayload : "",
-          spaceXLoaded : false
+          spaceXPayload : null,
+          breakingNewsPayload : null,
         }
     } 
 
 
+    //Do the API calls after the Application Mounted
     componentDidMount(){
       this.fetchWeatherData()
       this.fetchNewsData()
@@ -54,12 +55,13 @@ class Dashboard extends Component {
     fetch("https://us-central1-nirajfonseka-prod.cloudfunctions.net/top_news",sentData)
       .then(resp => resp.json())
       .then(resp => {
-       console.log(resp)
+        this.setState({
+          breakingNewsPayload : resp,
+        })
       })
     }
 
     fetchWeatherData() {
-
         let defaultOptions = {
             url:'',
             method:'GET',
@@ -88,28 +90,27 @@ class Dashboard extends Component {
           .then(resp => {
             this.setState({
               spaceXPayload : resp,
-              spaceXLoaded : true
             })
           })
       }
-    render() {
 
-  
-      if(this.state.spaceXImage == true){
-        console.log(this.state.spaceXPayload.links.mission_patch_small)
-      }
+
+
+    render() {
       return (
         <div className='dashboard'>
         <GridList cellHeight={200}  cols={3}>
-        <GridListTile  style={{margin: '1px' }} key={""} cols={3}>
-            <SpaceX loaded={this.state.spaceXLoaded} payload={this.state.spaceXPayload}/>
-
+        <GridListTile  style={{margin: '3px'}} key={""} cols={3}>
+          
+          <div >
+            <SpaceX  payload={this.state.spaceXPayload}/>
+          </div>
         </GridListTile>
 
 
-        <GridListTile  style={{margin: '0px' ,background : '#898989'}} key={""} cols={3}>
-          <div style={{whiteSpace: 'normal' }}>
-              <Twitter />
+        <GridListTile  style={{margin: '3px'}} key={""} cols={3}>
+          <div className="dashtile" >
+              <BreakingNews payload={this.state.breakingNewsPayload}/>
           </div>
         </GridListTile>  
         </GridList>
