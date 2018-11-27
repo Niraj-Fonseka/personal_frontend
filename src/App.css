@@ -1,8 +1,30 @@
+.mobile-page{
+  background-color: #2B204D;
+  overflow:scroll;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+}
+
+.mobile-prof-pic img{
+  display:block;
+  margin:auto;
+}
+
+
+.mobtext{
+  white-space: 'normal';
+  display: 'flex';
+  justify-content: 'center';
+}
+
 .App {
   text-align: center;
   
 }
-
 
 .child {
   border: solid 1px;

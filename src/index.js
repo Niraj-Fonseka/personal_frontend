@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import MobileApp from './MobileApp'
+import MobileApp from './mobile_app/MobileApp'
 import registerServiceWorker from './registerServiceWorker';
 import MediaQuery from 'react-responsive';
 
