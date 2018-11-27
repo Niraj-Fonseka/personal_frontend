@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
 import SocialMedia from './SocialMedia';
+import Resume from './Resume';
 import Typography from '@material-ui/core/Typography';
 
 
@@ -34,6 +35,8 @@ class MainPage extends Component {
                     </Typography>
 
                     <SocialMedia />
+
+                    <Resume />
                 </div>
             )
         }

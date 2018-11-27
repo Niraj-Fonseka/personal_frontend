@@ -10,8 +10,7 @@ import Bounce from 'react-reveal/Bounce';
 class SocialMedia extends Component {
   render() {
     return (
-      <div  style={{ display: 'flex', justifyContent: 'center' , marginTop: '40px'}}>
-            
+      <div  style={{ display: 'flex', justifyContent: 'center' , marginTop: '40px'}}>        
             <Bounce left>
                 <a href="https://www.linkedin.com/in/niraj-fonseka-03bab3107">
                     <img src={linkedin}  style={{ marginRight :'10px'}} />
