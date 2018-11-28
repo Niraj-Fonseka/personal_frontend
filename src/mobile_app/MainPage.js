@@ -3,10 +3,8 @@ import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
 import SocialMedia from './SocialMedia';
 import Resume from './Resume';
-import SignIn from './SignIn';
 import Typography from '@material-ui/core/Typography';
-
-
+import ProfilePic from '../Images/profileblur.png'
 
 class MainPage extends Component {
 
@@ -26,19 +24,23 @@ class MainPage extends Component {
                     </Fade> */}
                     <Bounce top>
                         <div className="mobile-prof-pic">
-                            <img src='https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg' style={{ marginTop: '20px', maxHeight: '50%', maxWidth: '50%'}} />
+                            <img src={ProfilePic} style={{ marginTop: '20px', maxHeight: '50%', maxWidth: '50%'}} />
                         </div>
                     </Bounce>
 
-                    <Typography noWrap='false' style={{whiteSpace: 'normal', margin: '10px', color:'#3ABAAC' ,  fontFamily: 'Righteous'}}>
-                    Hello! My Name is Niraj Fonseka. I graduated from the University of Texas with a degree in 
-                    Computer Science and a Minor in Business. I'm currently working as a Software Engineer at The Home Depot. 
-                    </Typography>
+                    <Bounce left>
+                        <Typography noWrap='false' style={{whiteSpace: 'normal',   textAlign: 'center', margin: '30px', color:'#3ABAAC' ,  fontFamily: 'Righteous'}}>
+                        Hello! My Name is Niraj Fonseka. I graduated from the University of Texas with a Bachelors degree in 
+                        Computer Science and a Minor in Business. I'm currently working as a Software Engineer at The Home Depot. 
+                        </Typography>
+                    </Bounce >
+
 
                     <SocialMedia />
 
+                    <Bounce bottom>
                     <Resume />
-
+                    </Bounce>
                 </div>
             )
         }

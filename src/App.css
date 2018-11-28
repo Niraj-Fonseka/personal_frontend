@@ -1,12 +1,6 @@
 
-.mobile-main-desc{
-  white-space: 'normal';
-  margin: '10px';
-  color: '#fff';
-  
-}
 .mobile-page{
-  background-image: url('./Images/space.gif') ;
+  background-image: url('./Images/fireflies.gif') ;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -18,14 +12,27 @@
   position: fixed;
 }
 
+.button {
+  background-color: #5B3F8A;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Righteous';
+  font-size: 14px;
+  display:block;
+  margin:auto;
+  cursor: pointer;
+}
+
 .mobile-prof-pic img{
   display:block;
   margin:auto;
   border-radius: 3px;
   border: 1px solid #1C1040;
   opacity: 0.85;
-  
-
 
 }
 
