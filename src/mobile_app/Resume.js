@@ -26,7 +26,7 @@ class Resume extends Component {
     render() {
         return (
             <section>
-                <input type="button" value="Resume" onClick={() => this.openModal()} />
+                <input className="button" type="button" value="Resume" onClick={() => this.openModal()} />
                 <Modal 
                     visible={this.state.visible}
                     width="100%"
