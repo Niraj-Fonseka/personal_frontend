@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
 import ResumeImage from '../Images/Resume.jpg'
+import Bounce from 'react-reveal/Bounce';
 
 
 class Resume extends Component {
@@ -25,6 +26,7 @@ class Resume extends Component {
 
     render() {
         return (
+            
             <section>
                 <input className="button" type="button" value="Resume" onClick={() => this.openModal()} />
                 <Modal 
@@ -34,13 +36,17 @@ class Resume extends Component {
                     effect="fadeInUp"
                     onClickAway={() => this.closeModal()}
                 >
-                    <div>
-                        <a href="javascript:void(0);" onClick={() => this.closeModal()}>close</a>
+                        <div>
+                            <a href="javascript:void(0);" onClick={() => this.closeModal()}>close</a>
 
-                        <img src={ResumeImage} style={{ maxHeight: '70%', maxWidth: '100%'}} />
-                    </div>
+                            <Bounce bottom>
+                            <img src={ResumeImage} style={{ maxHeight: '70%', maxWidth: '100%'}} />
+                            </Bounce>
+
+                        </div>
                 </Modal>
             </section>
+
         );
     }
 }

@@ -38,9 +38,7 @@ class MainPage extends Component {
 
                     <SocialMedia />
 
-                    <Bounce bottom>
                     <Resume />
-                    </Bounce>
                 </div>
             )
         }
