@@ -9,6 +9,8 @@
     "react-dom": "^16.4.1",
     "react-responsive": "^5.0.0",
     "react-reveal": "^1.2.2",
+    "react-scrollbar": "^0.5.4",
+    "react-smart-sticky": "^0.1.1",
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
