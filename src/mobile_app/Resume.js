@@ -29,13 +29,15 @@ class Resume extends Component {
                 <input type="button" value="Resume" onClick={() => this.openModal()} />
                 <Modal 
                     visible={this.state.visible}
-                    width="400"
-                    height="300"
+                    width="100%"
+                    height="50%"
                     effect="fadeInUp"
                     onClickAway={() => this.closeModal()}
                 >
                     <div>
-                        <img src={ResumeImage}  onClick={() => this.closeModal()} style={{ maxHeight: '70%', maxWidth: '100%'}} />
+                        <a href="javascript:void(0);" onClick={() => this.closeModal()}>close</a>
+
+                        <img src={ResumeImage} style={{ maxHeight: '70%', maxWidth: '100%'}} />
                     </div>
                 </Modal>
             </section>

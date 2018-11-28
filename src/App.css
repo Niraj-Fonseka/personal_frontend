@@ -1,6 +1,15 @@
+
+.mobile-main-desc{
+  white-space: 'normal';
+  margin: '10px';
+  color: '#fff';
+  
+}
 .mobile-page{
-  background-color: #4D267B;
-  overflow:scroll;
+  background-image: url('./Images/space.gif') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 100%;
   width: 100%;
   left: 0;
@@ -12,6 +21,12 @@
 .mobile-prof-pic img{
   display:block;
   margin:auto;
+  border-radius: 3px;
+  border: 1px solid #1C1040;
+  opacity: 0.85;
+  
+
+
 }
 
 

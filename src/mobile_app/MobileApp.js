@@ -6,9 +6,11 @@ import MainPage from './MainPage';
 class MobileApp extends Component {
   render() {
     return (
-     <div>
+    
+      <div>
         <MainPage />
       </div>
+    
     );
   }
 }
