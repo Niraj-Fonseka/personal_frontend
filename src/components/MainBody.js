@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ProfilePage from './ProfilePage'
 import Resume from './Resume'
+import TechGraph from './TechGraph/TechGraph'
 import Dashboard from './Dashboard';
 
 class MainBody extends Component {
@@ -19,12 +20,18 @@ class MainBody extends Component {
           <ProfilePage />
           </div>
         );
-      }else if (this.props.resume){
+      }else if (this.props.resumeClicked){
         return(
         <div>
           <Resume />
         </div>
         );
+        }else if (this.props.techGraphClicked){
+          return (
+            <div>
+              <TechGraph />
+            </div>
+          );
       }else{
         return(
           <div>

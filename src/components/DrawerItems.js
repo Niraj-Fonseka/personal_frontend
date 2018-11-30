@@ -14,13 +14,13 @@ class DrawerItems extends Component {
 
     constructor(props){
         super(props);
-        this.state = { profileClicked : this.props.profileClicked , resume : this.props.resumeClicked}
+        this.state = { profileClicked : this.props.profileClicked , resume : this.props.resumeClicked , techgraph: this.props.techGraphClicked}
     }
 
     render() {
       return (
       <div>
-        <ListItem button onClick={this.props.click}>
+        <ListItem button onClick={this.props.homeOnClick}>
           <ListItemIcon>
             <Home />
           </ListItemIcon>
@@ -43,6 +43,12 @@ class DrawerItems extends Component {
             <DraftsIcon />
           </ListItemIcon>
           <ListItemText primary="Contact me" />
+        </ListItem>
+        <ListItem button onClick={this.props.techGraphClicked}>
+          <ListItemIcon>
+            <DraftsIcon />
+          </ListItemIcon>
+          <ListItemText primary="Tech Graph" />
         </ListItem>
     </div>
       );
