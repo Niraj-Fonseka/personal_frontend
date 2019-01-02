@@ -25,18 +25,20 @@ class BreakingNews extends Component {
                 this.generateList()
 
                 return(
-                    <div  style={{whiteSpace: 'normal'}}>
+                    <div >
     
                         <div style={{fontSize: '25px' , marginBottom: '10px'}}>
-                            Top Breaking BreakingNews
+                            Top Breaking Breaking News
                             <hr/>
                         </div>
 
-                        <ul>
-                            {this.props.payload.articles.map(function(listValue){
-                                return <li>{listValue.description}</li>;
-                            })}
-                         </ul>
+                        <div style={{fontSize: '15px' , whiteSpace: 'normal' , overflowY:'scroll' , maxHeight: '100px' }}>
+                            <ul>
+                                {this.props.payload.articles.map(function(listValue){
+                                    return <li>{listValue.description}</li>;
+                                })}
+                            </ul>
+                         </div>
  
                         
                     </div>

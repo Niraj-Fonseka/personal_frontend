@@ -102,7 +102,7 @@ class Dashboard extends Component {
         <GridList cellHeight={200}  cols={3}>
         <GridListTile  style={{margin: '3px'}} key={""} cols={3}>
           
-          <div >
+          <div className="dashtile">
             <SpaceX  payload={this.state.spaceXPayload}/>
           </div>
         </GridListTile>
@@ -113,6 +113,7 @@ class Dashboard extends Component {
               <BreakingNews payload={this.state.breakingNewsPayload}/>
           </div>
         </GridListTile>  
+
         </GridList>
       </div>
       );

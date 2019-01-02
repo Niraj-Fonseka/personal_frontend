@@ -10,7 +10,7 @@ class TechGraph extends Component {
     componentDidMount(){
         var baseNodes = [
             { id: "mammal", group: 0, label: "Mammals", level: 1 },
-            { id: "dog"   , group: 0, label: "Dogs"   , level: 2 },
+            { id: "dooog"   , group: 0, label: "Dogs"   , level: 2 },
             { id: "cat"   , group: 0, label: "Cats"   , level: 2 },
             { id: "fox"   , group: 0, label: "Foxes"  , level: 2 },
             { id: "elk"   , group: 0, label: "Elk"    , level: 2 },
@@ -22,7 +22,7 @@ class TechGraph extends Component {
             { id: "pike"  , group: 2, label: "Pikes"  , level: 2 }
           ]
           var baseLinks = [
-              { target: "mammal", source: "dog" , strength: 0.7 },
+              { target: "mammal", source: "dooog" , strength: 0.7 },
               { target: "mammal", source: "cat" , strength: 0.7 },
             { target: "mammal", source: "fox" , strength: 0.7 },
             { target: "mammal", source: "elk" , strength: 0.7 },
@@ -33,12 +33,47 @@ class TechGraph extends Component {
             { target: "cat"   , source: "elk" , strength: 0.1 },
             { target: "carp"  , source: "ant" , strength: 0.1 },
             { target: "elk"   , source: "bee" , strength: 0.1 },
-            { target: "dog"   , source: "cat" , strength: 0.1 },
+            { target: "dooog"   , source: "cat" , strength: 0.1 },
             { target: "fox"   , source: "ant" , strength: 0.1 },
               { target: "pike"  , source: "cat" , strength: 0.1 }
           ]
+
+        // var baseNodes = [
+        //     { id: "react-js", group: 0, label: "FrontEnd", level: 1 },
+        //     { id: "vue-js"   , group: 0, label: "FrontEnd"   , level: 2 },
+        //     { id: "d3-js"   , group: 0, label: "FrontEnd"   , level: 2 },
+        //     { id: "vannila.js"   , group: 0, label: "FrontEnd"  , level: 2 },
+        //     { id: "Go"   , group: 0, label: "FrontEnd"    , level: 2 },
+        //     { id: "Java", group: 1, label: "BackEnd", level: 1 },
+        //     { id: "C"   , group: 1, label: "BackEnd"   , level: 2 },
+        //     { id: "C++"   , group: 1, label: "BackEnd"   , level: 2 },
+        //     { id: "Python"  , group: 2, label: "BackEnd"   , level: 1 },
+        //     { id: "MySQL"  , group: 2, label: "Datastore"   , level: 2 },
+        //     { id: "Mongo"  , group: 2, label: "Datastore"  , level: 2 },
+        //     { id: "Datastore"  , group: 2, label: "Datastore"  , level: 2 },
+        //     { id: "Kubernates"  , group: 2, label: "Infrastructure"  , level: 2 },
+        //     { id: "Docker"  , group: 2, label: "Infrastructure"  , level: 2 }
+        //   ]
+        //   var baseLinks = [
+        //     { target: "FrontEnd", source: "react-js" , strength: 0.7 },
+        //     { target: "FrontEnd", source: "vue-js" , strength: 0.7 },
+        //     { target: "FrontEnd", source: "d3-js" , strength: 0.7 },
+        //     { target: "FrontEnd", source: "vannila.js" , strength: 0.7 },
+        //     { target: "BackEnd", source: "Go" , strength: 0.7 },
+        //     { target: "BackEnd", source: "Java" , strength: 0.7 },
+        //     { target: "BackEnd"  , source: "C", strength: 0.7 },
+        //     { target: "BackEnd"  , source: "C++", strength: 0.7 },
+        //     { target: "BackEnd"   , source: "Python" , strength: 0.1 },
+        //     { target: "Database"  , source: "MySQL" , strength: 0.1 },
+        //     { target: "Database"   , source: "Datastore" , strength: 0.1 },
+        //     { target: "Database"   , source: "Mongo" , strength: 0.1 },
+        //     { target: "Infrastructure"   , source: "Kubernates" , strength: 0.1 },
+        //     { target: "Infrastructure"  , source: "Docker" , strength: 0.1 }
+        //   ]
           var nodes = [...baseNodes]
           var links = [...baseLinks]
+
+
           function getNeighbors(node) {
             return baseLinks.reduce(function (neighbors, link) {
                 if (link.target.id === node.id) {
@@ -51,21 +86,31 @@ class TechGraph extends Component {
               [node.id]
             )
           }
+
+
           function isNeighborLink(node, link) {
             return link.target.id === node.id || link.source.id === node.id
           }
+
+
           function getNodeColor(node, neighbors) {
             if (Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1) {
               return node.level === 1 ? 'blue' : 'green'
             }
             return node.level === 1 ? 'red' : 'gray'
           }
+
+
           function getLinkColor(node, link) {
             return isNeighborLink(node, link) ? 'green' : '#E5E5E5'
           }
+
+
           function getTextColor(node, neighbors) {
             return Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1 ? 'green' : 'black'
           }
+
+          
           var width = window.innerWidth
           var height = window.innerHeight
           var svg = d3.select(this.refs.hello).append('svg')
@@ -110,46 +155,50 @@ class TechGraph extends Component {
           function selectNode(selectedNode) {
             if (selectedId === selectedNode.id) {
               selectedId = undefined
-              resetData()
-              updateSimulation()
+              //resetData()
+             // updateSimulation()
             } else {
-              selectedId = selectedNode.id
-              updateData(selectedNode)
-              updateSimulation()
+              selectedId =  selectedNode.id
+              //updateData(selectedNode)
+              //updateSimulation()
             }
             var neighbors = getNeighbors(selectedNode)
             // we modify the styles to highlight selected nodes
             nodeElements.attr('fill', function (node) { return getNodeColor(node, neighbors) })
             textElements.attr('fill', function (node) { return getTextColor(node, neighbors) })
-            linkElements.attr('stroke', function (link) { return getLinkColor(selectedNode, link) })
+            //linkElements.attr('stroke', function (link) { return getLinkColor(selectedNode, link) })
           }
-          // this helper simple adds all nodes and links
-          // that are missing, to recreate the initial state
-          function resetData() {
-            var nodeIds = nodes.map(function (node) { return node.id })
-            baseNodes.forEach(function (node) {
-              if (nodeIds.indexOf(node.id) === -1) {
-                nodes.push(node)
-              }
-            })
-            links = baseLinks
-          }
-          // diffing and mutating the data
-          function updateData(selectedNode) {
-            var neighbors = getNeighbors(selectedNode)
-            var newNodes = baseNodes.filter(function (node) {
-              return neighbors.indexOf(node.id) > -1 || node.level === 1
-            })
-            var diff = {
-              removed: nodes.filter(function (node) { return newNodes.indexOf(node) === -1 }),
-              added: newNodes.filter(function (node) { return nodes.indexOf(node) === -1 })
-            }
-            diff.removed.forEach(function (node) { nodes.splice(nodes.indexOf(node), 1) })
-            diff.added.forEach(function (node) { nodes.push(node) })
-            links = baseLinks.filter(function (link) {
-              return link.target.id === selectedNode.id || link.source.id === selectedNode.id
-            })
-          }
+        //   // this helper simple adds all nodes and links
+        //   // that are missing, to recreate the initial state
+        //   function resetData() {
+        //     var nodeIds = nodes.map(function (node) { return node.id })
+        //     baseNodes.forEach(function (node) {
+        //       if (nodeIds.indexOf(node.id) === -1) {
+        //         nodes.push(node)
+        //       }
+        //     })
+        //     links = baseLinks
+        //   }
+
+
+        //   // diffing and mutating the data
+        //   function updateData(selectedNode) {
+        //     var neighbors = getNeighbors(selectedNode)
+        //     var newNodes = baseNodes.filter(function (node) {
+        //       return neighbors.indexOf(node.id) > -1 || node.level === 1
+        //     })
+        //     var diff = {
+        //       removed: nodes.filter(function (node) { return newNodes.indexOf(node) === -1 }),
+        //       added: newNodes.filter(function (node) { return nodes.indexOf(node) === -1 })
+        //     }
+        //     diff.removed.forEach(function (node) { nodes.splice(nodes.indexOf(node), 1) })
+        //     diff.added.forEach(function (node) { nodes.push(node) })
+        //     links = baseLinks.filter(function (link) {
+        //       return link.target.id === selectedNode.id || link.source.id === selectedNode.id
+        //     })
+        //   }
+
+
           function updateGraph() {
             // links
             linkElements = linkGroup.selectAll('line')
@@ -189,6 +238,7 @@ class TechGraph extends Component {
               .attr('dy', 4)
             textElements = textEnter.merge(textElements)
           }
+          
           function updateSimulation() {
             updateGraph()
             simulation.nodes(nodes).on('tick', () => {
