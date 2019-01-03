@@ -51,7 +51,7 @@ class DrawerItems extends Component {
 
         <ListItem button onClick={this.props.techGraphClicked}>
           <ListItemIcon>
-            <DraftsIcon />
+            <StarIcon />
           </ListItemIcon>
           <ListItemText primary="Tech Graph" />
         </ListItem>
