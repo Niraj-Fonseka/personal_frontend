@@ -97,28 +97,49 @@ class MiniDrawer extends React.Component {
     profileClicked: true,
     resumeClicked: false,
     dashboardClicked: false,
+    techGraphClicked: false,
   };
 
 
-  handleOnButtonClick = (e) => {
-    console.log(e.target.value);
+  handleOnProfileClick = (e) => {
     
     this.setState({ profileClicked : true })
   }
 
   handleOnDashboardClick = (e) => {
     
-    this.setState({ profileClicked : false , dashboardClicked: true, resumeClicked : false })
+    this.setState({
+        profileClicked : false , 
+        dashboardClicked: true,
+        resumeClicked : false , 
+        techGraphClicked : false 
+      })
   }
 
   handleOnResumeClick = (e) => {
     
-    this.setState({ profileClicked : false ,dashboardClicked: false, resumeClicked : true })
+    this.setState({ 
+      profileClicked : false, 
+      dashboardClicked: false, 
+      resumeClicked : true,
+      techGraphClicked : false 
+    })
+
   }
 
-  handleDrawerOpen = () => {
-    console.log("Clicked drawer");
+  handleOnTechGraphClick = (e) => {
     
+    this.setState({
+       profileClicked : false, 
+       dashboardClicked: false,
+       resumeClicked : false,
+       techGraphClicked : true
+      })
+
+  }
+
+
+  handleDrawerOpen = () => {    
     this.setState({ open: true , text : "Hello" });
   };
 
@@ -164,13 +185,18 @@ class MiniDrawer extends React.Component {
           </div>
           <Divider />
           <List>
-            <DrawerItems dashboardOnClick={this.handleOnDashboardClick.bind(this)} resumeOnClick={this.handleOnResumeClick.bind(this)} click={this.handleOnButtonClick.bind(this)}/>
+            <DrawerItems techGraphClicked={this.handleOnTechGraphClick.bind(this)} 
+            dashboardOnClick={this.handleOnDashboardClick.bind(this)} 
+            resumeOnClick={this.handleOnResumeClick.bind(this)} 
+            homeOnClick={this.handleOnProfileClick.bind(this)}/>
           </List>
           <Divider />
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          <Typography noWrap>{<MainBody profileClicked={this.state.profileClicked} resume={this.state.resumeClicked}/>}</Typography>
+          <Typography noWrap>{<MainBody techGraphClicked={this.state.techGraphClicked} 
+           profileClicked={this.state.profileClicked} 
+           resumeClicked={this.state.resumeClicked}/>}</Typography>
         </main>
       </div>
     );

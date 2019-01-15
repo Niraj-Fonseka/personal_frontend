@@ -15,15 +15,16 @@ class SpaceX extends Component {
         
         if (this.props.payload != null) {
             return(
-                <div  style={{whiteSpace: 'normal' }}>
+                <div >
 
                     <div style={{fontSize: '25px' , marginBottom: '10px'}}>
                         Upcoming Space X Launch
                         <hr/>
                     </div>
 
-                    <div style={{fontSize: '15px'}}> 
+                    <div style={{fontSize: '15px' , whiteSpace: 'normal' , overflowY:'scroll' , maxHeight: '100px' }}> 
                         {this.props.payload.details} 
+                        
                     </div>
 
                     <div style={{ marginTop: '10px'}} >
@@ -33,7 +34,7 @@ class SpaceX extends Component {
                     <div>
                         Launch Date : {this.props.payload.launch_date_utc}
                     </div>
-        
+                     
                 </div>
             )
     

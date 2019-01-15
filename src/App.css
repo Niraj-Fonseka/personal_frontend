@@ -1,4 +1,14 @@
-
+.main-toolbar {
+  background-image: url('./Images/network.gif') ;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+}
 .mobile-page{
   background-image: url('./Images/fireflies.gif') ;
   background-size: cover;
