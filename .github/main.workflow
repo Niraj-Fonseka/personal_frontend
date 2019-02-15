@@ -26,6 +26,7 @@ action "GitHub Action for Google Cloud" {
   args = "app deploy"
   secrets = [
     "GCLOUD_AUTH",
+    "CLOUDSDK_CORE_PROJECT",
   ]
 }
 
