@@ -17,4 +17,6 @@ action "GitHub Action for npm" {
 action "GitHub Action for Google Cloud" {
   uses = "actions/gcloud/cli@1a017b23ef5762d20aeb3972079a7bce2c4a8bfe"
   needs = ["GitHub Action for npm"]
+  args = "app deploy"
+  secrets = ["GCLOUD_AUTH"]
 }
