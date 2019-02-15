@@ -26,7 +26,6 @@ action "GitHub Action for Google Cloud" {
   args = "app deploy"
   secrets = [
     "GCLOUD_AUTH",
-    "PROJECT",
   ]
 }
 
@@ -34,6 +33,6 @@ action "GitHub Action for Google Cloud SDK auth" {
   uses = "actions/gcloud/auth@1a017b23ef5762d20aeb3972079a7bce2c4a8bfe"
   secrets = [
     "GCLOUD_AUTH",
-    "PROJECT",
+    "CLOUDSDK_CORE_PROJECT",
   ]
 }
