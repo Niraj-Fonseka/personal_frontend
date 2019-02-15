@@ -21,12 +21,18 @@ class TechGraph extends Component {
             { id: "vanillajs"   , group: 1, label: "VanillaJS"   , level: 2 },
             { id: "database"  , group: 2, label: "Database"   , level: 1 },
             { id: "redis"  , group: 2, label: "Redis"   , level: 2 },
-            { id: "mysql"  , group: 2, label: "MySQL"  , level: 2 }
+            { id: "mysql"  , group: 2, label: "MySQL"  , level: 2 },
+            { id: "cloud_platforms", group: 3, label: "CloudPlatform", level: 1 },
+            { id: "Google Cloud", group: 3, label: "GoogleCloudPlatform", level: 2 },
+            { id: "Amazon Web Services", group: 3, label: "AWS", level: 2 }
+
+
           ]
           var baseLinks = [
             { target: "backend", source: "myskills" , strength: 0.2 },
             { target: "frontend", source: "myskills" , strength: 0.2 },
             { target: "database", source: "myskills" , strength: 0.2 },
+            { target: "cloud_platforms", source: "myskills" , strength: 0.2 },
             { target: "backend", source: "golang" , strength: 0.5 },
             { target: "backend", source: "python" , strength: 0.5 },
             { target: "backend", source: "java" , strength: 0.5 },
@@ -35,6 +41,8 @@ class TechGraph extends Component {
             { target: "frontend", source: "vanillajs" , strength: 0.5 },
             { target: "database"  , source: "redis", strength: 0.5 },
             { target: "database"  , source: "mysql", strength: 0.5 },
+            { target: "Google Cloud"  , source: "cloud_platforms", strength: 0.5 },
+            { target: "Amazon Web Services"  , source: "cloud_platforms", strength: 0.5 }
 
           ]
 
