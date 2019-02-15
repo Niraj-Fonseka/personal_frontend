@@ -24,7 +24,7 @@ class TechGraph extends Component {
             { id: "mysql"  , group: 2, label: "MySQL"  , level: 2 },
             { id: "cloud_platforms", group: 3, label: "CloudPlatform", level: 1 },
             { id: "Google Cloud", group: 3, label: "GoogleCloudPlatform", level: 2 },
-            { id: "Amazon Web Services", group: 3, label: "Amazon Services", level: 2 }
+            { id: "Amazon Web Services", group: 3, label: "Amazon Web Services", level: 2 }
 
 
           ]
