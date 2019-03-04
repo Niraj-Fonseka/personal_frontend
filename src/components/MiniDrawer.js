@@ -167,7 +167,7 @@ class MiniDrawer extends React.Component {
               <MenuIcon />
             </IconButton>
             <Typography variant="title" color="inherit" noWrap>
-              Welcome To My Website
+              Niraj Fonseka 
             </Typography>
           </Toolbar>
         </AppBar>

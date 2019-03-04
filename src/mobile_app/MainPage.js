@@ -15,13 +15,12 @@ class MainPage extends Component {
 
     
     render(){
+
+        const font = "'Karla', sans-serif"; 
+
           return (
                 <div className="mobile-page">
-                    {/* <Fade top>
-                        <Typography noWrap='false' style={{whiteSpace: 'normal', fontColor : 'white', display: 'flex', fontSize: '25px', marginTop: '10px',marginBottom: '10px', justifyContent: 'center'}}>
-                            fonseka.live@gmail.com
-                        </Typography>
-                    </Fade> */}
+                    
                     <Bounce top>
                         <div className="mobile-prof-pic">
                             <img src={ProfilePic} style={{ marginTop: '20px', maxHeight: '50%', maxWidth: '50%'}} />
@@ -29,7 +28,7 @@ class MainPage extends Component {
                     </Bounce>
 
                     <Bounce left>
-                        <Typography noWrap='false' style={{whiteSpace: 'normal',   textAlign: 'center', margin: '30px', color:'#3ABAAC' ,  fontFamily: 'Righteous'}}>
+                        <Typography noWrap='false' style={{whiteSpace: 'normal',   textAlign: 'center', margin: '30px', color:'rgba(0, 0, 0, 0.87)' ,  fontFamily: font}}>
                         Hello! My Name is Niraj Fonseka. I graduated from the University of Texas with a Bachelors degree in 
                         Computer Science and a Minor in Business. I'm currently working as a Software Engineer at The Home Depot. 
                         </Typography>
