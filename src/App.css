@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
 .main-toolbar {
   background-image: url('./Images/network.gif') ;
   background-repeat: no-repeat;
@@ -10,7 +12,8 @@
   position: fixed;
 }
 .mobile-page{
-  background-image: url('./Images/fireflies.gif') ;
+ /* background-image: url('./Images/fireflies.gif') ;*/
+  background-color: #fafafa; 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -30,7 +33,7 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-family: 'Righteous';
+  font-family: "'Karla', sans-serif";
   font-size: 14px;
   display:block;
   margin:auto;
@@ -40,7 +43,7 @@
 .mobile-prof-pic img{
   display:block;
   margin:auto;
-  opacity: 0.85;
+  /*opacity: 0.85;*/
 
 }
 

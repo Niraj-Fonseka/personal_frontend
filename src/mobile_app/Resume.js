@@ -25,10 +25,17 @@ class Resume extends Component {
     }
 
     render() {
+
+        const font = "'Karla', sans-serif"; 
+
+        let styles = {
+            fontFamily: font,
+          };
+
         return (
             
             <section>
-                <input className="button" type="button" value="Resume" onClick={() => this.openModal()} />
+                <input className="button" type="button" style={styles} value="Resume"  onClick={() => this.openModal()} />
                 <Modal 
                     visible={this.state.visible}
                     width="100%"
