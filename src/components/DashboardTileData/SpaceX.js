@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SpaceXLogo from '../../Images/spacexlogo.png'
 
 
 
@@ -15,14 +16,20 @@ class SpaceX extends Component {
         
         if (this.props.payload != null) {
             return(
-                <div >
+                <div style={{ padding : '10px', overflowY:'scroll' , maxHeight: '600px' , backgroundColor:'#b2ebf2' }} >
 
+                    
                     <div style={{fontSize: '25px' , marginBottom: '10px'}}>
                         Upcoming Space X Launch
                         <hr/>
                     </div>
+                    {/* <div >
+                        Image here
+                        <img src={SpaceXLogo} style={{maxHeight: '50%' , maxWidth: '50%'}}></img>
+                    </div> */}
 
-                    <div style={{fontSize: '15px' , whiteSpace: 'normal' , overflowY:'scroll' , maxHeight: '100px' }}> 
+                    <div style={{fontSize: '15px' , whiteSpace: 'normal'}}> 
+
                         {this.props.payload.details} 
                         
                     </div>
@@ -35,6 +42,7 @@ class SpaceX extends Component {
                         Launch Date : {this.props.payload.launch_date_utc}
                     </div>
                      
+                    
                 </div>
             )
     
