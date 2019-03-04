@@ -99,20 +99,21 @@ class Dashboard extends Component {
     render() {
       return (
         <div className='dashboard'>
-        <GridList cellHeight={200}  cols={3}>
-        <GridListTile  style={{margin: '3px'}} key={""} cols={3}>
+        <GridList cellHeight={600}  cols={3}>
+        <GridListTile  style={{margin: '3px'}} key={""} cols={1}>
           
           <div className="dashtile">
             <SpaceX  payload={this.state.spaceXPayload}/>
           </div>
         </GridListTile>
+        
+  
 
-
-        <GridListTile  style={{margin: '3px'}} key={""} cols={3}>
+        {/* <GridListTile  style={{margin: '3px'}} key={""} cols={3}>
           <div className="dashtile" >
               <BreakingNews payload={this.state.breakingNewsPayload}/>
           </div>
-        </GridListTile>  
+        </GridListTile>   */}
 
         </GridList>
       </div>
