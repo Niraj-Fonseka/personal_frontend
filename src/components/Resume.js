@@ -46,7 +46,6 @@ class Resume extends Component {
                 <Typography >Bachelor of Science in Computer Science</Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
-                <img src='https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg'/>
                 <Typography noWrap='false' style={{whiteSpace: 'normal'}}>
                     <ul>
                         <ul>
@@ -136,7 +135,6 @@ class Resume extends Component {
             <Typography >Software Engineer - ( May 2017 - Present )</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-            <img src='https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg'/>
 
             <Typography noWrap='false' style={{whiteSpace: 'normal'}}>
             <ul>
@@ -206,16 +204,11 @@ class Resume extends Component {
             <Typography >Software Engineer - ( May 2017 - Present )</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
-            <img src='https://s3-us-west-2.amazonaws.com/nirajfonsekacom/16969962.jpeg'/>
 
             <Typography noWrap='false' style={{whiteSpace: 'normal'}}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                sit amet blandit leo lobortis eget.
-                asdasdasdaksldamskldm aklsdm admaksd mlakmsd lasd
-                asdklamsdlkamsdklamsk askdm alksdmalskd masd mksmdkskksmd aksmd as daksm kasmd ks smdskmdks malesuadaa
-                asdasdasdaksldamskldmasdda
-                sdasdasdasdkmal mas d
-                asdasdasdaksldamskldmasddasdasd
+                <ul>
+                 <li>Central Texas SPCA</li>
+                </ul>
             </Typography>
             </ExpansionPanelDetails>
         </ExpansionPanel>
