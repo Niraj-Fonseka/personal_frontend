@@ -28,12 +28,22 @@ class DrawerItems extends Component {
           <ListItemText primary="Profile" />
         </ListItem>
 
+
         <ListItem button onClick={this.props.resumeOnClick}>
           <ListItemIcon>
             <Work />
           </ListItemIcon>
           <ListItemText primary="Resume" />
         </ListItem>
+
+
+        <ListItem button onClick={this.props.techGraphClicked}>
+          <ListItemIcon>
+            <StarIcon />
+          </ListItemIcon>
+          <ListItemText primary="Skills" />
+        </ListItem>
+
 
         <ListItem button onClick={this.props.dashboardOnClick}>
           <ListItemIcon>
@@ -42,6 +52,7 @@ class DrawerItems extends Component {
           <ListItemText primary="Cool things" />
         </ListItem>
 
+
         <ListItem button>
           <ListItemIcon>
             <DraftsIcon />
@@ -49,12 +60,7 @@ class DrawerItems extends Component {
           <ListItemText primary="Contact me" />
         </ListItem>
 
-        <ListItem button onClick={this.props.techGraphClicked}>
-          <ListItemIcon>
-            <StarIcon />
-          </ListItemIcon>
-          <ListItemText primary="Tech Graph" />
-        </ListItem>
+
     </div>
       );
     }

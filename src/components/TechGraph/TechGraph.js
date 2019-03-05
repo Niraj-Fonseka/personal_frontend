@@ -18,6 +18,7 @@ class TechGraph extends Component {
             { id: "c"   , group: 0, label: "C"    , level: 2 },
             { id: "frontend", group: 1, label: "Frontend", level: 1 },
             { id: "reactjs"   , group: 1, label: "ReactJS"   , level: 2 },
+            { id: "d3js"   , group: 1, label: "D3js"   , level: 2 },
             { id: "vanillajs"   , group: 1, label: "VanillaJS"   , level: 2 },
             { id: "database"  , group: 2, label: "Database"   , level: 1 },
             { id: "redis"  , group: 2, label: "Redis"   , level: 2 },
@@ -38,6 +39,7 @@ class TechGraph extends Component {
             { target: "backend", source: "java" , strength: 0.5 },
             { target: "backend", source: "c" , strength: 0.5 },
             { target: "frontend", source: "reactjs" , strength: 0.5 },
+            { target: "frontend", source: "d3js" , strength: 0.5 },
             { target: "frontend", source: "vanillajs" , strength: 0.5 },
             { target: "database"  , source: "redis", strength: 0.5 },
             { target: "database"  , source: "mysql", strength: 0.5 },
@@ -158,37 +160,7 @@ class TechGraph extends Component {
             textElements.attr('fill', function (node) { return getTextColor(node, neighbors) })
             //linkElements.attr('stroke', function (link) { return getLinkColor(selectedNode, link) })
           }
-        //   // this helper simple adds all nodes and links
-        //   // that are missing, to recreate the initial state
-        //   function resetData() {
-        //     var nodeIds = nodes.map(function (node) { return node.id })
-        //     baseNodes.forEach(function (node) {
-        //       if (nodeIds.indexOf(node.id) === -1) {
-        //         nodes.push(node)
-        //       }
-        //     })
-        //     links = baseLinks
-        //   }
-
-
-        //   // diffing and mutating the data
-        //   function updateData(selectedNode) {
-        //     var neighbors = getNeighbors(selectedNode)
-        //     var newNodes = baseNodes.filter(function (node) {
-        //       return neighbors.indexOf(node.id) > -1 || node.level === 1
-        //     })
-        //     var diff = {
-        //       removed: nodes.filter(function (node) { return newNodes.indexOf(node) === -1 }),
-        //       added: newNodes.filter(function (node) { return nodes.indexOf(node) === -1 })
-        //     }
-        //     diff.removed.forEach(function (node) { nodes.splice(nodes.indexOf(node), 1) })
-        //     diff.added.forEach(function (node) { nodes.push(node) })
-        //     links = baseLinks.filter(function (link) {
-        //       return link.target.id === selectedNode.id || link.source.id === selectedNode.id
-        //     })
-        //   }
-
-
+   
           function updateGraph() {
             // links
             linkElements = linkGroup.selectAll('line')
@@ -208,7 +180,7 @@ class TechGraph extends Component {
             var nodeEnter = nodeElements
               .enter()
               .append('circle')
-              .attr('r', 10)
+              .attr('r', 8)
               .attr('fill', function (node) { return node.level === 1 ? 'red' : 'gray' })
               .call(dragDrop)
               // we link the selectNode method here
