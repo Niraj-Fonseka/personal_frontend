@@ -27,8 +27,76 @@ class Resume extends Component {
 
         return (
         <div class="profile">
+<div>
+        <div style={{marginBottom: 10, marginTop: 10}}>
+            <div style={{marginBottom: 5}}>
+            <Typography variant='title'>
+                    Work Experience
+            </Typography>
+            </div>
+            <div style={{marginBottom: 5}}>
+            <Typography>
+                    The Home Depot - (2016 - present)
+            </Typography>
+            </div>
+        </div>
+
+        <div  class="resume-field">
+        <ExpansionPanel>
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography >Software Engineer - ( May 2017 - Present )</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+
+            <Typography noWrap='false' style={{whiteSpace: 'normal'}}>
+            <ul>
+            <li>Developed a high volume API using Go that was the hub for more than 30 different data sources.</li>
+            <li>Created a Slack Bot using Go that mines data from data sources and provide mission critical data for teams reducing mean time to detect and mean time to restore. </li>
+            <li>Created the first internal Mobile Application for Reliability Engineering using React Native to provide senior level management, Site Reliability Engineers ( SREs)  and Operations teams with metrics and service health data. </li>
+            <li>Led a backend dev team of six and refactored / rewrote APIs ( from Python to Go ) for over 6 applications with various tech stacks by defining proper design, concurrency and testing patterns.</li>
+            <li>SRE for over 6 internal applications used by developers and other SREs.</li>
+            <li> Involved in architectural discussions and development of self service Destructive Testing, Load Testing and Front End performance testing tools.</li>
+            <li>Mentored 2 interns during summer 2017 and guided them through their summer project</li>
+            <li>Active member of the hiring committee for Home Depot. Interviewed engineers for Engineer 1, Senior Engineer and Staff engineer positions. Designed interview problems, summer projects for over 50+ interns.</li>
+            <li>Improved applications by introducing inner sourcing across multiple teams by contributing different projects. </li>
+            </ul>
+            </Typography>
+            </ExpansionPanelDetails>
+        </ExpansionPanel>
+        </div>
+        <div  class="resume-field">
+        <ExpansionPanel>
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography >Software Engineer (Part Time) - ( Sep 2016 - May 2017 )</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+            <Typography noWrap='false' style={{whiteSpace: 'normal'}}>
+            <ul>
+            <li> Architected and developed an application to collect metrics and define Service Level Objectives and Error Budgets for microservices at Home Depot. </li>
+            <li>Created an interactive dependency graph for 1000+ micro services using D3.js and React.js to show dependencies between microservices and their service level objectives. </li>
+            </ul>
+            </Typography>
+            </ExpansionPanelDetails>
+        </ExpansionPanel>
+        </div>
+        <div  class="resume-field">
+        <ExpansionPanel>
+            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography >Software engineering intern - ( May 2016 - Aug 2016 )</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelDetails>
+            <Typography noWrap='false' style={{whiteSpace: 'normal'}}>
+            <ul>
+            <li>Developed a tool to automate creating tickets in ServiceNow for alerts that gets pushed over the threshold in Microsoft Operations Management Suite. Deployed this tool on Microsoft Azure using Runbooks.</li>
+           </ul>
+            </Typography>
+            </ExpansionPanelDetails>
+        </ExpansionPanel>
+        </div>
+        </div>
+
             <div>
-                <div style={{marginBottom: 10}}>
+                <div style={{marginBottom: 10 ,  marginTop: 10}}>
                     <div style={{marginBottom: 5}}>
                         <Typography variant='title'>
                                 Education
@@ -119,75 +187,6 @@ class Resume extends Component {
         <div style={{marginBottom: 10, marginTop: 10}}>
             <div style={{marginBottom: 5}}>
             <Typography variant='title'>
-                    Work Experience
-            </Typography>
-            </div>
-            <div style={{marginBottom: 5}}>
-            <Typography>
-                    The Home Depot - (2016 - present)
-            </Typography>
-            </div>
-        </div>
-
-        <div  class="resume-field">
-        <ExpansionPanel>
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography >Software Engineer - ( May 2017 - Present )</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-
-            <Typography noWrap='false' style={{whiteSpace: 'normal'}}>
-            <ul>
-            <li>Developed a high volume API using Go that was the hub for more than 30 different data sources.</li>
-            <li>Created a Slack Bot using Go that mines data from data sources and provide mission critical data for teams reducing mean time to detect and mean time to restore. </li>
-            <li>Created the first internal Mobile Application for Reliability Engineering using React Native to provide senior level management, Site Reliability Engineers ( SREs)  and Operations teams with metrics and service health data. </li>
-            <li>Led a backend dev team of six and refactored / rewrote APIs ( from Python to Go ) for over 6 applications with various tech stacks by defining proper design, concurrency and testing patterns.</li>
-            <li>SRE for over 6 internal applications used by developers and other SREs.</li>
-            <li> Involved in architectural discussions and development of self service Destructive Testing, Load Testing and Front End performance testing tools.</li>
-            <li>Mentored 2 interns during summer 2017 and guided them through their summer project</li>
-            <li>Active member of the hiring committee for Home Depot. Interviewed engineers for Engineer 1, Senior Engineer and Staff engineer positions. Designed interview problems, summer projects for over 50+ interns.</li>
-            <li>Improved applications by introducing inner sourcing across multiple teams by contributing different projects. </li>
-            </ul>
-            </Typography>
-            </ExpansionPanelDetails>
-        </ExpansionPanel>
-        </div>
-        <div  class="resume-field">
-        <ExpansionPanel>
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography >Software Engineer (Part Time) - ( Sep 2016 - May 2017 )</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-            <Typography noWrap='false' style={{whiteSpace: 'normal'}}>
-            <ul>
-            <li> Architected and developed an application to collect metrics and define Service Level Objectives and Error Budgets for microservices at Home Depot. </li>
-            <li>Created an interactive dependency graph for 1000+ micro services using D3.js and React.js to show dependencies between microservices and their service level objectives. </li>
-            </ul>
-            </Typography>
-            </ExpansionPanelDetails>
-        </ExpansionPanel>
-        </div>
-        <div  class="resume-field">
-        <ExpansionPanel>
-            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography >Software engineering intern - ( May 2016 - Aug 2016 )</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-            <Typography noWrap='false' style={{whiteSpace: 'normal'}}>
-            <ul>
-            <li>Developed a tool to automate creating tickets in ServiceNow for alerts that gets pushed over the threshold in Microsoft Operations Management Suite. Deployed this tool on Microsoft Azure using Runbooks.</li>
-           </ul>
-            </Typography>
-            </ExpansionPanelDetails>
-        </ExpansionPanel>
-        </div>
-        </div>
-
-
-        <div>
-        <div style={{marginBottom: 10, marginTop: 10}}>
-            <div style={{marginBottom: 5}}>
-            <Typography variant='title'>
                     Volunteer Experience
             </Typography>
             </div>
@@ -201,7 +200,7 @@ class Resume extends Component {
         <div  class="resume-field">
         <ExpansionPanel>
             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography >Software Engineer - ( May 2017 - Present )</Typography>
+            <Typography >Central Texas SPCA</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
 
